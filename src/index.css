@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-headline: "IBM Plex Sans Arabic", sans-serif;
+  --font-body: "IBM Plex Sans Arabic", sans-serif;
+  
+  --color-primary: #00618f;
+  --color-primary-container: #31b2fb;
+  --color-secondary: #974300;
+  --color-secondary-container: #ffc5a6;
+  --color-tertiary: #226900;
+  --color-tertiary-container: #96f46e;
+  --color-on-surface: #0e304e;
+  --color-on-surface-variant: #405e7e;
+  --color-surface: #f3f6ff;
+  --color-surface-container: #dae9ff;
+  --color-surface-container-low: #e9f1ff;
+  --color-surface-container-high: #d0e4ff;
+  --color-surface-container-highest: #c6dfff;
+  --color-surface-container-lowest: #ffffff;
+  
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  direction: rtl;
+}
+
+h1, h2, h3, h4, .font-headline {
+  font-family: var(--font-headline);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.organic-shape {
+  border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
